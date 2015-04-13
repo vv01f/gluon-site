@@ -1,10 +1,14 @@
 ## Howto build
 
+1. check the [dependencies](https://gluon.readthedocs.org/en/latest/user/getting_started.html#dependencies) and install missing
+2. follow this script
+
 ```bash
 # bisher nehmen wir den Branch master:
 git clone https://github.com/freifunk-gluon/gluon.git
 cd gluon
 git clone https://github.com/c3d2/gluon-site.git
+mv gluon-site site
 echo "PACKAGES_DDMESH_REPO=git://github.com/c3d2/gluon-packages.git" >> modules
 # Bauen:
 make update
