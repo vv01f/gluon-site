@@ -1,5 +1,5 @@
 GLUON_SITE_PACKAGES := \
-	gluon-mesh-batman-adv-14 \
+	gluon-mesh-batman-adv-15 \
 	gluon-alfred \
 	gluon-announced \
 	gluon-config-mode-hostname \
@@ -11,10 +11,12 @@ GLUON_SITE_PACKAGES := \
 	gluon-luci-portconfig \
 	gluon-radvd \
 	gluon-status-page \
+	gluon-ddmesh \
 	bmxd \
 	iwinfo \
 	iptables \
-	haveged
+	haveged \
+	wpad
 
 
 DEFAULT_GLUON_RELEASE := 0.6+exp$(shell date '+%Y%m%d')
