@@ -4,7 +4,7 @@
 # bisher nehmen wir den Branch master:
 git clone https://github.com/freifunk-gluon/gluon.git
 cd gluon
-git clone https://github.com/c3d2/gluon-site.git
+git clone https://github.com/c3d2/gluon-site.git site
 echo "PACKAGES_DDMESH_REPO=git://github.com/c3d2/gluon-packages.git" >> modules
 # Bauen:
 make update
