@@ -11,4 +11,18 @@ make update
 make GLUON_TARGET=x86-generic
 ```
 
+## Howto test with qemu
+
+```bash
+gzip -cd < images/factory/gluon-...-x86-generic.img.gz > /tmp/img
+kvm -hda /tmp/img -net tap -net nic
+```
+
 [Mehr Doku](http://gluon.readthedocs.org/en/latest/user/getting_started.html#building-the-images)
+
+## TODO
+
+* Register as cronjob
+* Setup bmxd
+* backbone
+* Internet over backbone
