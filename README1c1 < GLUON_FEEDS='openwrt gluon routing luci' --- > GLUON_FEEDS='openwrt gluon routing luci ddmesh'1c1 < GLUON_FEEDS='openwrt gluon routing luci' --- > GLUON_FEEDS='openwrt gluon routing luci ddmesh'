@@ -5,7 +5,12 @@
 git clone https://github.com/freifunk-gluon/gluon.git
 cd gluon
 git clone https://github.com/c3d2/gluon-site.git site
+cat modules | head -1 |sed "s/'$/ ddmesh'/" > m
+cat modules | tail -$(($(cat modules|wc -l)-1)) > n
+cat m n > modules; rm m; rm n;
 echo "PACKAGES_DDMESH_REPO=git://github.com/c3d2/gluon-packages.git" >> modules
+#master funktioniert hier nicht, commit-nr funktioniert aber
+#echo "PACKAGES_DDMESH_COMMIT=" >> modules
 # Bauen:
 make update
 make GLUON_TARGET=x86-generic
